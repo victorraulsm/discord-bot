@@ -17,10 +17,10 @@ class Chat(commands.Cog):
 
     @commands.command(name='ola', help='Diga olá para o bot.')
     async def hello(self, ctx, *, member: nextcord.Member = None):
-        """Says hello"""
+        """Diga olá para o LiteSecBot"""
         member = member or ctx.author
         if self._last_member is None or self._last_member.id != member.id:
-            await ctx.reply('Olá {} ❤️'.format(member))
+            await ctx.reply('Olá {}'.format(member))
             await ctx.reply('Tudo bem com você!?')
         else:
             await ctx.reply('Olá {}... 🤔'.format(member))
