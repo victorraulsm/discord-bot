@@ -253,6 +253,7 @@ class VoiceState:
 
     async def stop(self):
         self.songs.clear()
+        self.voice.stop()
 
         if self.voice:
             await self.voice.disconnect()
